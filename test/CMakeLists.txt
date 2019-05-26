@@ -11,8 +11,8 @@ find_package(GTest REQUIRED)
 
 
 set(SRC_FILES_WITHOUT_MAIN 
-	../src/example.cpp
-	../src/example.h
+	${PROJECT_SOURCE_DIR}/src/example.cpp
+	${PROJECT_SOURCE_DIR}/src/example.h
 )
 
 

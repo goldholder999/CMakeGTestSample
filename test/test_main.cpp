@@ -5,6 +5,10 @@ TEST(AddTest, CanPass) {
     EXPECT_EQ(1, sum(0, 1));
 }
 
+TEST(AddTest2, CanPass) {
+    EXPECT_EQ(-1, minus(0, 1));
+}
+
 int main(int argc, char** argv)
 {
     ::testing::InitGoogleTest(&argc, argv);

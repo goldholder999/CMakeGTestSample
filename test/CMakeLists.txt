@@ -33,3 +33,7 @@ add_executable(	${TEST_BIN_NAME}
 target_link_libraries(${TEST_BIN_NAME}   GTest::GTest  )
 
 
+add_test(
+    NAME test1
+    COMMAND ${TEST_BIN_NAME} 
+)

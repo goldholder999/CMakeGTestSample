@@ -7,9 +7,9 @@ if(DEFINED ENV{VCPKG_ROOT} AND NOT DEFINED CMAKE_TOOLCHAIN_FILE)
 
 endif()
 
+include(CTest)
 
-
-find_package(GTest REQUIRED)
+find_package(GTest)
 if(GTest_FOUND)
     SET(GTEST_LINK_LIB GTest::GTest)
 else()
@@ -76,3 +76,6 @@ add_test(
      NAME ${TEST_BIN_NAME} 
      COMMAND ${TEST_BIN_NAME} 
 )
+
+add_custom_target(check COMMAND ${CMAKE_CTEST_COMMAND}
+                  DEPENDS ${TEST_BIN_NAME} )

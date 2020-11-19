@@ -1,4 +1,4 @@
-cmake_minimum_required (VERSION 3.8)
+cmake_minimum_required (VERSION 3.10)
 
 if(DEFINED ENV{VCPKG_ROOT} AND NOT DEFINED CMAKE_TOOLCHAIN_FILE)
     # vcpackage
@@ -71,8 +71,8 @@ add_executable(	${TEST_BIN_NAME}
 )
 target_link_libraries(${TEST_BIN_NAME}    ${GTEST_LINK_LIB} )
 
-enable_testing()
+
 add_test(
-    NAME test1
-    COMMAND ${TEST_BIN_NAME} 
+     NAME ${TEST_BIN_NAME} 
+     COMMAND ${TEST_BIN_NAME} 
 )
